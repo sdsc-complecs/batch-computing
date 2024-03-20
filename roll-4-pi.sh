@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#SBATCH --job-name=rolling-4-pi
+#SBATCH --job-name=roll-4-pi
 #SBATCH --account=use300
 #SBATCH --partition=debug
 #SBATCH --nodes=1
