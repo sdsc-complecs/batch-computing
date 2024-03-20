@@ -17,4 +17,5 @@ An introduction to batch computing on high-performance computing systems for non
 #SBATCH --output=%x.o%j.%N
 
 hostname
+sleep 30
 ```
