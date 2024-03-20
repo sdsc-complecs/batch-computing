@@ -103,6 +103,7 @@ else:
 ```
 
 ```
+[mkandes@login02 ~]$ vi pi.py
 [mkandes@login02 ~]$ python3 pi.py --help
 usage: pi.py [-h] [-v] samples
 
@@ -114,5 +115,15 @@ positional arguments:
 optional arguments:
   -h, --help     show this help message and exit
   -v, --verbose
+[mkandes@login02 ~]$ python3 --version
+Python 3.6.8
+[mkandes@login02 ~]$ which python3
+/usr/bin/python3
+[mkandes@login02 ~]$ python3 pi.py 100
+2.98989898989899
+[mkandes@login02 ~]$ python3 pi.py 1000
+3.191191191191191
+[mkandes@login02 ~]$ python3 pi.py 10000
+3.1375137513751374
 [mkandes@login02 ~]$
 ```
