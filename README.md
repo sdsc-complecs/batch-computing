@@ -101,3 +101,18 @@ else:
     pi = 4 * inside / (inside + outside)
     print(pi)
 ```
+
+```
+[mkandes@login02 ~]$ python3 pi.py --help
+usage: pi.py [-h] [-v] samples
+
+Estimate the value of Pi via Monte Carlo
+
+positional arguments:
+  samples        number of Monte Carlo samples
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -v, --verbose
+[mkandes@login02 ~]$
+```
