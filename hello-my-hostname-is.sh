@@ -11,3 +11,4 @@
 #SBATCH --output=%x.o%j.%N
 
 hostname
+sleep 30
