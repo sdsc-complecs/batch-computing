@@ -7,7 +7,7 @@
 #SBATCH --ntasks-per-node=128
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=243G
-#SBATCH --time=00:02:00
+#SBATCH --time=00:05:00
 #SBATCH --output=%x.o%j.%N
 
 declare -xr COMPILER_NAME='aocc'
