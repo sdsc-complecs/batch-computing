@@ -124,7 +124,6 @@ def main():
 
     # Save the model
     model.save('saved_model.'+os.environ['SLURM_JOB_ID'])
-    #model.save('saved_model.'+os.environ['SLURM_ARRAY_JOB_ID']+'.'+os.environ['SLURM_ARRAY_TASK_ID'])
 
     return 0
 
