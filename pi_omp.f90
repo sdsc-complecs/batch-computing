@@ -93,26 +93,4 @@
       write(unit=output_unit, fmt=*) pi
 
       stop
-
-      contains
-
-      real function logistic_map(n, r, x) result(y)
-      implicit none
-
-      integer, intent(in) :: n
-
-      real, intent(in) :: r
-      real, intent(inout) :: x
-
-      integer :: i
-   
-      do i = 1, n
-         x = r*x*(1.0-x) 
-      enddo
-
-      y = x
-
-      return 
-      end function
-
       end program
