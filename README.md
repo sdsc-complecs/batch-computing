@@ -52,7 +52,7 @@ exp-9-55
 [mkandes@login02 ~]$
 ```
 
-### Exercise 2: Rolling 4 Pi
+### Exercise 2: Roll 4 Pi
 
 ```
 #!/usr/bin/env python3
