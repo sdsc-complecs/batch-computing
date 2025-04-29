@@ -174,7 +174,7 @@ sys 0.01
 [mkandes@login02 ~]$
 ```
 
-## About COMPLECS
+# About COMPLECS
 
 COMPLECS (COMPrehensive Learning for end-users to Effectively utilize
 CyberinfraStructure) is a new SDSC program where training will cover
