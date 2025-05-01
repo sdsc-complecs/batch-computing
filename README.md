@@ -1,6 +1,39 @@
 # batch-computing
 An introduction to batch computing on high-performance computing systems for non-programmers. 
 
+### Step 1:
+Clone this repo
+```
+[etrain76@login01]$ git clone https://github.com/sdsc-complecs/batch-computing.git
+Cloning into 'batch-computing'...
+remote: Enumerating objects: 91, done.
+remote: Counting objects: 100% (91/91), done.
+remote: Compressing objects: 100% (88/88), done.
+remote: Total 91 (delta 38), reused 5 (delta 2), pack-reused 0 (from 0)
+Receiving objects: 100% (91/91), 165.37 KiB | 2.30 MiB/s, done.
+Resolving deltas: 100% (38/38), done.
+[etrain76@login01 wrkshp-prep]$ cd batch-computing/
+[etrain76@login01 batch-computing]$ ls -al
+total 179
+drwxr-xr-x 4 etrain76 gue998   17 May  1 07:12 .
+drwxr-xr-x 5 etrain76 gue998    5 May  1 07:12 ..
+-rw-r--r-- 1 etrain76 gue998  308 May  1 07:12 build-pi-omp.sh
+-rw-r--r-- 1 etrain76 gue998  311 May  1 07:12 estimate-pi.sh
+drwxr-xr-x 8 etrain76 gue998   13 May  1 07:12 .git
+-rw-r--r-- 1 etrain76 gue998  271 May  1 07:12 hello-my-hostname-is.sh
+drwxr-xr-x 2 etrain76 gue998    3 May  1 07:12 images
+-rw-r--r-- 1 etrain76 gue998 7048 May  1 07:12 LICENSE
+-rw-r--r-- 1 etrain76 gue998  380 May  1 07:12 Makefile
+-rw-r--r-- 1 etrain76 gue998 2929 May  1 07:12 pi_omp.f90
+-rw-r--r-- 1 etrain76 gue998 1385 May  1 07:12 pi.py
+-rw-r--r-- 1 etrain76 gue998 5461 May  1 07:12 README.md
+-rw-r--r-- 1 etrain76 gue998  358 May  1 07:12 roll-4-pi.sh
+-rw-r--r-- 1 etrain76 gue998 2801 May  1 07:12 run-gromacs-h2o.sh
+-rw-r--r-- 1 etrain76 gue998  383 May  1 07:12 run-pi-omp.sh
+-rw-r--r-- 1 etrain76 gue998 1027 May  1 07:12 run-tf2-train-cnn-cifar.sh
+-rw-r--r-- 1 etrain76 gue998 5502 May  1 07:12 tf2-train-cnn-cifar.py
+```
+
 ### Exercise 1: Hello, my hostname is
 
 ```
