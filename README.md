@@ -206,6 +206,8 @@ sys 0.01
 
 ### Exercise 3: Build Job, Run Job
 
+### Exercise 4: GPU-Accelerated Workloads
+
 # About COMPLECS
 
 COMPLECS (COMPrehensive Learning for end-users to Effectively utilize
