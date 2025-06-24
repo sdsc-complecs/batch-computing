@@ -36,27 +36,35 @@ squeue -u $USER
 ```
 
 ```
-[mkandes@login02 ~]$ vi hello-my-hostname-is.sh 
-[mkandes@login02 ~]$ ls
-datasets  hello-my-hostname-is.sh  projects  scripts  software
-[mkandes@login02 ~]$ sbatch hello-my-hostname-is.sh 
-Submitted batch job 29394313
-[mkandes@login02 ~]$ sbatch hello-my-hostname-is.sh 
-Submitted batch job 29394314
-[mkandes@login02 ~]$ squeue -u $USER
+[etrain102@login02 batch-computing]$ sbatch hello-my-hostname-is.sh 
+Submitted batch job 40599374
+[etrain102@login02 batch-computing]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-          29394314     debug hello-my  mkandes  R       0:03      1 exp-9-55
-          29394313     debug hello-my  mkandes  R       0:04      1 exp-9-55
-[mkandes@login02 ~]$ squeue -j 29394313
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-          29394313     debug hello-my  mkandes  R       0:21      1 exp-9-55
-[mkandes@login02 ~]$ ls
-datasets                                 hello-my-hostname-is.sh  software
-hello-my-hostname-is.o29394313.exp-9-55  projects
-hello-my-hostname-is.o29394314.exp-9-55  scripts
-[mkandes@login02 ~]$ cat hello-my-hostname-is.o29394313.exp-9-55
-exp-9-55
-[mkandes@login02 ~]$
+          40599374    shared hello-my etrain10  R       0:00      1 exp-1-03
+[etrain102@login02 batch-computing]$
+[etrain102@login02 batch-computing]$ ls -lahtr
+total 179K
+drwxr-x--- 5 etrain102 gue998   15 Jun 24 09:54 ..
+-rw-r--r-- 1 etrain102 gue998 6.9K Jun 24 09:54 LICENSE
+-rw-r--r-- 1 etrain102 gue998  380 Jun 24 09:54 Makefile
+-rw-r--r-- 1 etrain102 gue998 5.5K Jun 24 09:54 README.md
+-rw-r--r-- 1 etrain102 gue998  341 Jun 24 09:54 build-pi-omp.sh
+-rw-r--r-- 1 etrain102 gue998  343 Jun 24 09:54 estimate-pi.sh
+-rw-r--r-- 1 etrain102 gue998  304 Jun 24 09:54 hello-my-hostname-is.sh
+drwxr-xr-x 2 etrain102 gue998    3 Jun 24 09:54 images
+-rw-r--r-- 1 etrain102 gue998 1.4K Jun 24 09:54 pi.py
+-rw-r--r-- 1 etrain102 gue998 2.9K Jun 24 09:54 pi_omp.f90
+-rw-r--r-- 1 etrain102 gue998  391 Jun 24 09:54 roll-4-pi.sh
+-rw-r--r-- 1 etrain102 gue998 2.8K Jun 24 09:54 run-gromacs-h2o.sh
+-rw-r--r-- 1 etrain102 gue998  416 Jun 24 09:54 run-pi-omp.sh
+-rw-r--r-- 1 etrain102 gue998 1.1K Jun 24 09:54 run-tf2-train-cnn-cifar.sh
+-rw-r--r-- 1 etrain102 gue998 5.4K Jun 24 09:54 tf2-train-cnn-cifar.py
+drwxr-xr-x 8 etrain102 gue998   13 Jun 24 09:54 .git
+drwxr-xr-x 4 etrain102 gue998   18 Jun 24 09:54 .
+-rw-r--r-- 1 etrain102 gue998    9 Jun 24 09:54 hello-my-hostname-is.o40599374.exp-1-03
+[etrain102@login02 batch-computing]$ cat hello-my-hostname-is.o40599374.exp-1-03 
+exp-1-03
+[etrain102@login02 batch-computing]$
 ```
 
 ### Exercise 2: Roll 4 Pi
