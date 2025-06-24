@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 #SBATCH --job-name=gromacs-2020.4-2ufeq67-aocc-3.2.0-io3s466-openmpi-4.1.3-xigazqd-water-cut1.0_GMX50_bare-3072-4-node-128-mpi-1-omp
-#SBATCH --account=use300
+#SBATCH --account=gue998
+#SBATCH --reservation=ciml25cpu
 #SBATCH --partition=compute
 #SBATCH --nodes=4
 #SBATCH --ntasks-per-node=128
