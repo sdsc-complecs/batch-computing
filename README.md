@@ -166,21 +166,15 @@ time -p python3 pi.py 100000000
 ```
 
 ```
-[mkandes@login02 ~]$ ls
-datasets                                 hello-my-hostname-is.sh  roll-4-pi.sh
-hello-my-hostname-is.o29394313.exp-9-55  pi.py                    scripts
-hello-my-hostname-is.o29394314.exp-9-55  projects                 software
-[mkandes@login02 ~]$ sinfo -p debug
-PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
-debug        up      30:00      1   plnd exp-9-56
-debug        up      30:00      1    mix exp-9-55
-[mkandes@login02 ~]$ sbatch roll-4-pi.sh 
-Submitted batch job 29402750
-[mkandes@login02 ~]$ squeue -u $USER
+[etrain102@login02 batch-computing]$ sbatch roll-4-pi.sh 
+Submitted batch job 40599437
+[etrain102@login02 batch-computing]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-          29402750     debug roll-4-p  mkandes  R       0:22      1 exp-9-55
-[mkandes@login02 ~]$ squeue -u $USER
+          40599437    shared roll-4-p etrain10  R       0:03      1 exp-1-03
+[etrain102@login02 batch-computing]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          40599437    shared roll-4-p etrain10  R       0:14      1 exp-1-03
+[etrain102@login02 batch-computing]$
 [mkandes@login02 ~]$ tail -n 4 roll-4-pi.o29402750.exp-9-55 
 3.1413662714136628
 real 62.54
