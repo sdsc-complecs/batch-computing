@@ -204,6 +204,8 @@ sys 0.01
 [etrain102@login02 batch-computing]$
 ```
 
+### Exercise 3: Build Job, Run Job
+
 # About COMPLECS
 
 COMPLECS (COMPrehensive Learning for end-users to Effectively utilize
