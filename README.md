@@ -366,6 +366,28 @@ drwxr-x--- 6 etrain102 gue998   16 Jun 24 10:09 ..
 [etrain102@login02 batch-computing]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 [etrain102@login02 batch-computing]$
+[etrain102@login02 batch-computing]$ tail -n 20 train-cnn-cifar-c10-fp32-e42-bs256-tensorflow-22.08-tf2-py3-1v100.o40599509.exp-4-58
+196/196 - 1s - loss: 0.4319 - accuracy: 0.8495 - 851ms/epoch - 4ms/step
+Epoch 36/42
+196/196 - 1s - loss: 0.4184 - accuracy: 0.8531 - 863ms/epoch - 4ms/step
+Epoch 37/42
+196/196 - 1s - loss: 0.4014 - accuracy: 0.8605 - 860ms/epoch - 4ms/step
+Epoch 38/42
+196/196 - 1s - loss: 0.3862 - accuracy: 0.8638 - 867ms/epoch - 4ms/step
+Epoch 39/42
+196/196 - 1s - loss: 0.3739 - accuracy: 0.8706 - 851ms/epoch - 4ms/step
+Epoch 40/42
+196/196 - 1s - loss: 0.3642 - accuracy: 0.8736 - 855ms/epoch - 4ms/step
+Epoch 41/42
+196/196 - 1s - loss: 0.3573 - accuracy: 0.8749 - 869ms/epoch - 4ms/step
+Epoch 42/42
+196/196 - 1s - loss: 0.3479 - accuracy: 0.8768 - 855ms/epoch - 4ms/step
+40/40 - 0s - loss: 1.0874 - accuracy: 0.7057 - 307ms/epoch - 8ms/step
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 3 of 3). These functions will not be directly callable after loading.
+real 100.20
+user 45.43
+sys 12.96
+[etrain102@login02 batch-computing]$
 ```
 
 ### Exercise 5: Multinode MPI Jobs
