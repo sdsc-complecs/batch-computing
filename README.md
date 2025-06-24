@@ -643,6 +643,66 @@ Connection to exp-1-21 closed.
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           40599538   compute gromacs- etrain10  R       1:51      4 exp-1-[18-21]
 [etrain102@login02 batch-computing]$
+[etrain102@login02 batch-computing]$ ls -lahtr
+total 48M
+-rw-r--r-- 1 etrain102 gue998 6.9K Jun 24 09:54 LICENSE
+-rw-r--r-- 1 etrain102 gue998  380 Jun 24 09:54 Makefile
+-rw-r--r-- 1 etrain102 gue998 5.5K Jun 24 09:54 README.md
+-rw-r--r-- 1 etrain102 gue998  341 Jun 24 09:54 build-pi-omp.sh
+-rw-r--r-- 1 etrain102 gue998  343 Jun 24 09:54 estimate-pi.sh
+-rw-r--r-- 1 etrain102 gue998  304 Jun 24 09:54 hello-my-hostname-is.sh
+drwxr-xr-x 2 etrain102 gue998    3 Jun 24 09:54 images
+-rw-r--r-- 1 etrain102 gue998 1.4K Jun 24 09:54 pi.py
+-rw-r--r-- 1 etrain102 gue998 2.9K Jun 24 09:54 pi_omp.f90
+-rw-r--r-- 1 etrain102 gue998 2.8K Jun 24 09:54 run-gromacs-h2o.sh
+-rw-r--r-- 1 etrain102 gue998  416 Jun 24 09:54 run-pi-omp.sh
+-rw-r--r-- 1 etrain102 gue998 1.1K Jun 24 09:54 run-tf2-train-cnn-cifar.sh
+-rw-r--r-- 1 etrain102 gue998 5.4K Jun 24 09:54 tf2-train-cnn-cifar.py
+drwxr-xr-x 8 etrain102 gue998   13 Jun 24 09:54 .git
+-rw-r--r-- 1 etrain102 gue998    9 Jun 24 09:54 hello-my-hostname-is.o40599374.exp-1-03
+-rw-r--r-- 1 etrain102 gue998  391 Jun 24 09:58 roll-4-pi.sh
+-rw-r--r-- 1 etrain102 gue998  15K Jun 24 09:59 roll-4-pi.o40599437.exp-1-03
+-rw-r--r-- 1 etrain102 gue998 8.1K Jun 24 10:04 pi_omp.o
+-rwxr-xr-x 1 etrain102 gue998  24K Jun 24 10:04 pi_omp.x
+-rw-r--r-- 1 etrain102 gue998  13K Jun 24 10:04 build-pi-omp.o40599492.exp-1-03
+-rw-r--r-- 1 etrain102 gue998  13K Jun 24 10:06 run-pi-omp.o40599499.exp-1-03
+drwxr-xr-x 4 etrain102 gue998    6 Jun 24 10:10 saved_model.40599509
+-rw-r--r-- 1 etrain102 gue998  43K Jun 24 10:10 train-cnn-cifar-c10-fp32-e42-bs256-tensorflow-22.08-tf2-py3-1v100.o40599509.exp-4-58
+drwxr-xr-x 3 etrain102 gue998    4 Jun 24 10:12 benchmarks
+-rw-r--r-- 1 etrain102 gue998  12K Jun 24 10:13 mdout.gromacs-2020.4-2ufeq67-aocc-3.2.0-io3s466-openmpi-4.1.3-xigazqd-water-cut1.0_GMX50_bare-3072-4-node-128-mpi-1-omp.40599538.mdp
+drwxr-x--- 7 etrain102 gue998   17 Jun 24 10:13 ..
+-rw-r--r-- 1 etrain102 gue998  71M Jun 24 10:13 topol.gromacs-2020.4-2ufeq67-aocc-3.2.0-io3s466-openmpi-4.1.3-xigazqd-water-cut1.0_GMX50_bare-3072-4-node-128-mpi-1-omp.40599538.tpr
+-rw-r--r-- 1 etrain102 gue998    0 Jun 24 10:13 ener.gromacs-2020.4-2ufeq67-aocc-3.2.0-io3s466-openmpi-4.1.3-xigazqd-water-cut1.0_GMX50_bare-3072-4-node-128-mpi-1-omp.40599538.edr
+drwxr-xr-x 6 etrain102 gue998   31 Jun 24 10:13 .
+-rw-r--r-- 1 etrain102 gue998  19K Jun 24 10:13 md.gromacs-2020.4-2ufeq67-aocc-3.2.0-io3s466-openmpi-4.1.3-xigazqd-water-cut1.0_GMX50_bare-3072-4-node-128-mpi-1-omp.40599538.log
+-rw-r--r-- 1 etrain102 gue998 474K Jun 24 10:15 gromacs-2020.4-2ufeq67-aocc-3.2.0-io3s466-openmpi-4.1.3-xigazqd-water-cut1.0_GMX50_bare-3072-4-node-128-mpi-1-omp.o40599538.exp-1-18
+[etrain102@login02 batch-computing]$ less gromacs-2020.4-2ufeq67-aocc-3.2.0-io3s466-openmpi-4.1.3-xigazqd-water-cut1.0_GMX50_bare-3072-4-node-128-mpi-1-omp.o40599538.exp-1-18
+[etrain102@login02 batch-computing]$ less gromacs-2020.4-2ufeq67-aocc-3.2.0-io3s466-openmpi-4.1.3-xigazqd-water-cut1.0_GMX50_bare-3072-4-node-128-mpi-1-omp.o40599538.exp-1-18
+[etrain102@login02 batch-computing]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          40599538   compute gromacs- etrain10 CG       3:18      4 exp-1-[18-21]
+[etrain102@login02 batch-computing]$ tail -n 20 gromacs-2020.4-2ufeq67-aocc-3.2.0-io3s466-openmpi-4.1.3-xigazqd-water-cut1.0_GMX50_bare-3072-4-node-128-mpi-1-omp.o40599538.exp-1-18
+
+Dynamic load balancing report:
+ DLB was off during the run due to low measured imbalance.
+ Average load imbalance: 4.8%.
+ The balanceable part of the MD step is 85%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 4.0%.
+ Average PME mesh/force load: 0.953
+ Part of the total run time spent waiting due to PP/PME imbalance: 1.1 %
+
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    24901.925       52.641    47305.3
+                 (ns/day)    (hour/ns)
+Performance:       16.416        1.462
+
+GROMACS reminds you: "Research ! A mere excuse for idleness; it has never achieved, and will never achieve any results of the slightest value." (Benjamin Jowett, British theologian, 1817-93)
+
+real 136.92
+user 15217.42
+sys 1174.26
+[etrain102@login02 batch-computing]$ 
 ```
 
 # About COMPLECS
