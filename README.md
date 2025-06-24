@@ -287,6 +287,87 @@ sys 0.00
 
 ### Exercise 4: GPU-Accelerated Workloads
 
+```
+[etrain102@login02 batch-computing]$ sbatch run-tf2-train-cnn-cifar.sh 
+Submitted batch job 40599509
+[etrain102@login02 batch-computing]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          40599509 gpu-share train-cn etrain10  R       0:01      1 exp-4-58
+[etrain102@login02 batch-computing]$ cat run-tf2-train-cnn-cifar.sh
+#!/usr/bin/env bash
+
+#SBATCH --job-name=train-cnn-cifar-c10-fp32-e42-bs256-tensorflow-22.08-tf2-py3-1v100
+#SBATCH --account=gue998
+#SBATCH --reservation=ciml25gpu
+#SBATCH --partition=gpu-shared
+#SBATCH --qos=gpu-shared-eot
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=10
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=92G
+#SBATCH --gpus=1
+#SBATCH --time=00:05:00
+#SBATCH --output=%x.o%j.%N
+
+declare -xr LOCAL_SCRATCH_DIR="/scratch/${USER}/job_${SLURM_JOB_ID}"
+declare -xr LUSTRE_PROJECTS_DIR="/expanse/lustre/projects/${SLURM_JOB_ACCOUNT}/${USER}"
+declare -xr LUSTRE_SCRATCH_DIR="/expanse/lustre/scratch/${USER}/temp_project"
+declare -xr SINGULARITY_CONTAINER_DIR='/cm/shared/apps/containers/singularity'
+
+declare -xr SINGULARITY_MODULE='singularitypro/3.11'
+
+module purge
+module load "${SINGULARITY_MODULE}"
+module list
+export KERAS_HOME="${LOCAL_SCRATCH_DIR}"
+printenv
+
+time -p singularity exec --bind "${KERAS_HOME}:/tmp" --nv "${SINGULARITY_CONTAINER_DIR}/tensorflow/tensorflow_22.08-tf2-py3.sif" \
+  python3 -u tf2-train-cnn-cifar.py --classes 10 --precision fp32 --epochs 42 --batch_size 256
+[etrain102@login02 batch-computing]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          40599509 gpu-share train-cn etrain10  R       0:33      1 exp-4-58
+[etrain102@login02 batch-computing]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          40599509 gpu-share train-cn etrain10  R       1:00      1 exp-4-58
+[etrain102@login02 batch-computing]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          40599509 gpu-share train-cn etrain10  R       1:21      1 exp-4-58
+[etrain102@login02 batch-computing]$ ls -lahtr
+total 318K
+-rw-r--r-- 1 etrain102 gue998 6.9K Jun 24 09:54 LICENSE
+-rw-r--r-- 1 etrain102 gue998  380 Jun 24 09:54 Makefile
+-rw-r--r-- 1 etrain102 gue998 5.5K Jun 24 09:54 README.md
+-rw-r--r-- 1 etrain102 gue998  341 Jun 24 09:54 build-pi-omp.sh
+-rw-r--r-- 1 etrain102 gue998  343 Jun 24 09:54 estimate-pi.sh
+-rw-r--r-- 1 etrain102 gue998  304 Jun 24 09:54 hello-my-hostname-is.sh
+drwxr-xr-x 2 etrain102 gue998    3 Jun 24 09:54 images
+-rw-r--r-- 1 etrain102 gue998 1.4K Jun 24 09:54 pi.py
+-rw-r--r-- 1 etrain102 gue998 2.9K Jun 24 09:54 pi_omp.f90
+-rw-r--r-- 1 etrain102 gue998 2.8K Jun 24 09:54 run-gromacs-h2o.sh
+-rw-r--r-- 1 etrain102 gue998  416 Jun 24 09:54 run-pi-omp.sh
+-rw-r--r-- 1 etrain102 gue998 1.1K Jun 24 09:54 run-tf2-train-cnn-cifar.sh
+-rw-r--r-- 1 etrain102 gue998 5.4K Jun 24 09:54 tf2-train-cnn-cifar.py
+drwxr-xr-x 8 etrain102 gue998   13 Jun 24 09:54 .git
+-rw-r--r-- 1 etrain102 gue998    9 Jun 24 09:54 hello-my-hostname-is.o40599374.exp-1-03
+-rw-r--r-- 1 etrain102 gue998  391 Jun 24 09:58 roll-4-pi.sh
+-rw-r--r-- 1 etrain102 gue998  15K Jun 24 09:59 roll-4-pi.o40599437.exp-1-03
+-rw-r--r-- 1 etrain102 gue998 8.1K Jun 24 10:04 pi_omp.o
+-rwxr-xr-x 1 etrain102 gue998  24K Jun 24 10:04 pi_omp.x
+-rw-r--r-- 1 etrain102 gue998  13K Jun 24 10:04 build-pi-omp.o40599492.exp-1-03
+-rw-r--r-- 1 etrain102 gue998  13K Jun 24 10:06 run-pi-omp.o40599499.exp-1-03
+drwxr-xr-x 4 etrain102 gue998   24 Jun 24 10:09 .
+drwxr-x--- 6 etrain102 gue998   16 Jun 24 10:09 ..
+-rw-r--r-- 1 etrain102 gue998  42K Jun 24 10:10 train-cnn-cifar-c10-fp32-e42-bs256-tensorflow-22.08-tf2-py3-1v100.o40599509.exp-4-58
+[etrain102@login02 batch-computing]$ less train-cnn-cifar-c10-fp32-e42-bs256-tensorflow-22.08-tf2-py3-1v100.o40599509.exp-4-58
+[etrain102@login02 batch-computing]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          40599509 gpu-share train-cn etrain10  R       1:35      1 exp-4-58
+[etrain102@login02 batch-computing]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+[etrain102@login02 batch-computing]$
+```
+
 ### Exercise 5: Multinode MPI Jobs
 
 # About COMPLECS
