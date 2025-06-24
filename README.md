@@ -208,6 +208,8 @@ sys 0.01
 
 ### Exercise 4: GPU-Accelerated Workloads
 
+### Exercise 5: Multinode MPI Jobs
+
 # About COMPLECS
 
 COMPLECS (COMPrehensive Learning for end-users to Effectively utilize
