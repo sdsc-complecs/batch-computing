@@ -175,12 +175,33 @@ Submitted batch job 40599437
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           40599437    shared roll-4-p etrain10  R       0:14      1 exp-1-03
 [etrain102@login02 batch-computing]$
-[mkandes@login02 ~]$ tail -n 4 roll-4-pi.o29402750.exp-9-55 
-3.1413662714136628
-real 62.54
-user 62.36
+[etrain102@login02 batch-computing]$ ls -lahtr
+total 197K
+-rw-r--r-- 1 etrain102 gue998 6.9K Jun 24 09:54 LICENSE
+-rw-r--r-- 1 etrain102 gue998  380 Jun 24 09:54 Makefile
+-rw-r--r-- 1 etrain102 gue998 5.5K Jun 24 09:54 README.md
+-rw-r--r-- 1 etrain102 gue998  341 Jun 24 09:54 build-pi-omp.sh
+-rw-r--r-- 1 etrain102 gue998  343 Jun 24 09:54 estimate-pi.sh
+-rw-r--r-- 1 etrain102 gue998  304 Jun 24 09:54 hello-my-hostname-is.sh
+drwxr-xr-x 2 etrain102 gue998    3 Jun 24 09:54 images
+-rw-r--r-- 1 etrain102 gue998 1.4K Jun 24 09:54 pi.py
+-rw-r--r-- 1 etrain102 gue998 2.9K Jun 24 09:54 pi_omp.f90
+-rw-r--r-- 1 etrain102 gue998 2.8K Jun 24 09:54 run-gromacs-h2o.sh
+-rw-r--r-- 1 etrain102 gue998  416 Jun 24 09:54 run-pi-omp.sh
+-rw-r--r-- 1 etrain102 gue998 1.1K Jun 24 09:54 run-tf2-train-cnn-cifar.sh
+-rw-r--r-- 1 etrain102 gue998 5.4K Jun 24 09:54 tf2-train-cnn-cifar.py
+drwxr-xr-x 8 etrain102 gue998   13 Jun 24 09:54 .git
+-rw-r--r-- 1 etrain102 gue998    9 Jun 24 09:54 hello-my-hostname-is.o40599374.exp-1-03
+-rw-r--r-- 1 etrain102 gue998  391 Jun 24 09:58 roll-4-pi.sh
+drwxr-x--- 5 etrain102 gue998   15 Jun 24 09:58 ..
+drwxr-xr-x 4 etrain102 gue998   19 Jun 24 09:58 .
+-rw-r--r-- 1 etrain102 gue998  15K Jun 24 09:59 roll-4-pi.o40599437.exp-1-03
+[etrain102@login02 batch-computing]$ tail -n 4 roll-4-pi.o40599437.exp-1-03 
+3.1414509514145097
+real 62.72
+user 62.23
 sys 0.01
-[mkandes@login02 ~]$
+[etrain102@login02 batch-computing]$
 ```
 
 # About COMPLECS
