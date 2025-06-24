@@ -118,8 +118,7 @@ else:
 ```
 
 ```
-[mkandes@login02 ~]$ vi pi.py
-[mkandes@login02 ~]$ python3 pi.py --help
+[etrain102@login02 batch-computing]$ python3 pi.py --help
 usage: pi.py [-h] [-v] samples
 
 Estimate the value of Pi via Monte Carlo
@@ -130,17 +129,17 @@ positional arguments:
 optional arguments:
   -h, --help     show this help message and exit
   -v, --verbose
-[mkandes@login02 ~]$ python3 --version
+[etrain102@login02 batch-computing]$ python3 --version
 Python 3.6.8
-[mkandes@login02 ~]$ which python3
+[etrain102@login02 batch-computing]$ which python3
 /usr/bin/python3
-[mkandes@login02 ~]$ python3 pi.py 100
-2.98989898989899
-[mkandes@login02 ~]$ python3 pi.py 1000
-3.191191191191191
-[mkandes@login02 ~]$ python3 pi.py 10000
-3.1375137513751374
-[mkandes@login02 ~]$
+[etrain102@login02 batch-computing]$ python3 pi.py 100
+3.313131313131313
+[etrain102@login02 batch-computing]$ python3 pi.py 1000
+3.199199199199199
+[etrain102@login02 batch-computing]$ python3 pi.py 10000
+3.1343134313431342
+[etrain102@login02 batch-computing]$
 ```
 
 ```
