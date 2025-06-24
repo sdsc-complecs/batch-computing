@@ -16,7 +16,7 @@ declare -xr LUSTRE_PROJECTS_DIR="/expanse/lustre/projects/${SLURM_JOB_ACCOUNT}/$
 declare -xr LUSTRE_SCRATCH_DIR="/expanse/lustre/scratch/${USER}/temp_project"
 declare -xr SINGULARITY_CONTAINER_DIR='/cm/shared/apps/containers/singularity'
 
-declare -xr SINGULARITY_MODULE='singularitypro/3.9'
+declare -xr SINGULARITY_MODULE='singularitypro/3.11'
 
 module purge
 module load "${SINGULARITY_MODULE}"
