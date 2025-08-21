@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 #SBATCH --job-name=estimate-pi
-#SBATCH --account=gue998
-#SBATCH --reservation=ciml25cpu
 #SBATCH --partition=shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
