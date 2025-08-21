@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 #SBATCH --job-name=roll-4-pi
-#SBATCH --account=gue998
-#SBATCH --reservation=ciml25cpu
+#SBATCH --account=use300
 #SBATCH --partition=shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
