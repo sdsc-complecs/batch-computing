@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 #SBATCH --job-name=build-pi-omp
-#SBATCH --account=use300
+#SBATCH --account=sds280
+#SBATCH --reservation=ciml26cpu
 #SBATCH --partition=shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
