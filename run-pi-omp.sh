@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 #SBATCH --job-name=run-pi-omp
-#SBATCH --account=gue998
-#SBATCH --reservation=ciml25cpu
+#SBATCH --account=sds280
+#SBATCH --reservation=ciml26cpu
 #SBATCH --partition=shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
