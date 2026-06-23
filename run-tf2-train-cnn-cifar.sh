@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 #SBATCH --job-name=train-cnn-cifar-c10-fp32-e42-bs256-tensorflow-22.08-tf2-py3-1v100
-#SBATCH --account=use300
-#SBATCH --partition=gpu-shared
-#SBATCH --qos=gpu-shared-eot
+#SBATCH --account=sds280
+#SBATCH --reservation=ciml26gpu
+#SBATCH --partition=nairr-gpu-shared
+#SBATCH --qos=nairr-gpu-shared-eot
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=10
 #SBATCH --cpus-per-task=1
