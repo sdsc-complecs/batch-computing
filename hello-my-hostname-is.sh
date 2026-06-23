@@ -2,6 +2,7 @@
 
 #SBATCH --job-name=hello-my-hostname-is
 #SBATCH --account=sds280
+#SBATCH --reservation=ciml26cpu
 #SBATCH --partition=shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
