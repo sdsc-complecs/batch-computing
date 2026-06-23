@@ -146,8 +146,8 @@ Python 3.6.8
 #!/usr/bin/env bash
 
 #SBATCH --job-name=roll-4-pi
-#SBATCH --account=gue998
-#SBATCH --reservation=ciml25cpu
+#SBATCH --account=sds280
+#SBATCH --reservation=ciml26cpu
 #SBATCH --partition=shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
